@@ -7,6 +7,6 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Application works, amit is your king');
 });
 
-app.listen(3000, () => {
-  console.log('Application started on port 3000!');
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Application started on port ${process.env.PORT || 5000}`);
 });
