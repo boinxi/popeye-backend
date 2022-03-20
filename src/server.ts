@@ -1,7 +1,12 @@
 import express from 'express';
 import { Request, Response } from 'express';
 
+const SignupRouter = require('./routes/signup_route');
+
 const app = express();
+app.use(express.json())
+
+app.use('/signup', SignupRouter);
 
 app.get('/', (req: Request, res: Response) => {
   res.send('<h1>👑👑👑👑👑👑👑👑👑👑👑👑👑👑👑👑👑</h1>' +
