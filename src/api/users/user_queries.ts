@@ -7,3 +7,12 @@ export const addUserQuery = gql`
         }
     }
 `;
+
+export const getUserByUsernameQuery = gql`
+    query MyQuery($username: String!) {
+        users(where: {username: {_eq: $username}}) {
+            id
+            password
+            username
+        }
+    }`;
